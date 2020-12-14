@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/main.css" />
-    <title>Rainers Block</title>
-  </head>
+  <% include!("partials/head.stpl"); %>
   <body>
     <header>
       <section>
         <div class="header__column">
           <p class="header-column__label">Updated</p>
-          <p>13.12.2020</p>
+          <p><%= data.meta.last_edited_date.as_ref().unwrap() %></p>
         </div>
         <div class="header__column">
             <img src="assets/img/exclamation-mark.svg">
@@ -26,16 +21,15 @@
     </header>
     <section class="main">
       <div class="main__headlines">
-        <h1 class="main-headlines__big">Rainer Winkler</h1>
-        <h4 class="main-headlines__small">Proffessioneller Oger</h4>
+        <h1 class="main-headlines__big"><%= data.index.headline %></h1>
+        <h4 class="main-headlines__small"><%= data.index.sub_headline %></h4>
       </div>
       <div class="main__text">
         <p class="main-text__line">
-          Gonitschiwa, ich bin der Fettsack mid A I!
+          <%= data.index.first_line %>
         </p>
         <div class="main-text__line">
-          Ich habe keinne Beruf, außer im ehemaligne Schanze won meinem Vader
-          sitzne und nichds zu dun des bascht scho.
+          <%= data.index.second_line %>
         </div>
       </div>
     </section>
