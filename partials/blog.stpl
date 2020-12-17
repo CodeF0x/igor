@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <% include!("./blog_head.stpl"); %>
+  <body>
+    <section class="main">
+      <h1 class="main__headline"><%= blog_post_meta_data.title %></h1>
+      <h4 class="main__author">
+      <% if blog_post_meta_data.author_link != "" { %>
+        <a href="<%= blog_post_meta_data.author_link %>">by <%= blog_post_meta_data.author %></a>
+        on <%= blog_post_meta_data.date %>
+      <% } else { %>
+        by <%= blog_post_meta_data.author %> on <%= blog_post_meta_data.author %>
+      <% } %>
+      </h4>
+      <p class="main__flowtext">
+        <%- blog_post_html %>
+      </p>
+    </section>
+  </body>
+</html>

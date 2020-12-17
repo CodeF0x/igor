@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&family=Roboto:wght@300&display=swap");
+
+:root {
+    --color: white;
+    --background: black;
+    --color-light: #ffffff80;
+    --color-contrast: yellow;
+}
+
+body {
+    background: var(--background);
+}
+
+a {
+    color: var(--color);
+}
+
+.main {
+    margin: 150px auto;
+    width: 50%;
+}
+
+.main__headline,
+.main__author {
+    font-family: "Roboto", sans-serif;
+}
+
+.main__headline {
+    color: var(--color-contrast);
+}
+
+.main__author {
+    color: var(--color-light);
+}
+
+.main__flowtext {
+    font-family: "JetBrains Mono", monospace;
+    text-align: justify;
+    color: var(--color);
+}

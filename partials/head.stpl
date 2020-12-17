@@ -5,7 +5,7 @@
   <meta name="author" content="<%= data.meta.author %>">
   <meta name="keywords" content="
     <% for word in data.meta.keywords.iter() { %>
-      <%= word %>
+      <%= format!(\"{},\", word) %>
     <% } %>
   ">
   <link rel="stylesheet" href="assets/css/main.css" />

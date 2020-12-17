@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  <% include!("partials/head.stpl"); %>
+  <% include!("./partials/head.stpl"); %>
   <body>
     <header>
       <section>
         <div class="header__column">
           <p class="header-column__label">Updated</p>
-          <p><%= data.meta.last_edited_date.as_ref().unwrap() %></p>
+          <p><%= site.meta.last_generated_date %></p>
         </div>
         <div class="header__column">
-            <img src="assets/img/exclamation-mark.svg">
+          <img src="./assets/img/exclamation-mark.svg">
         </div>
         <div class="header__column">
           <p class="header-column__label">Design</p>
@@ -21,15 +21,15 @@
     </header>
     <section class="main">
       <div class="main__headlines">
-        <h1 class="main-headlines__big"><%= data.index.headline %></h1>
-        <h4 class="main-headlines__small"><%= data.index.sub_headline %></h4>
+        <h1 class="main-headlines__big">Placeholder</h1>
+        <h4 class="main-headlines__small">Placeholder</h4>
       </div>
       <div class="main__text">
         <p class="main-text__line">
-          <%= data.index.first_line %>
+          Placeholder
         </p>
         <div class="main-text__line">
-          <%= data.index.second_line %>
+          Placeholder
         </div>
       </div>
     </section>
