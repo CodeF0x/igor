@@ -1,7 +1,11 @@
 ---
 title = ""
+date = ""
+
+# seo
 author = ""
 author_link = ""
-draft = yes
-date = ""
---- 
+keywords = []
+description = ""
+draft = true
+---

@@ -4,10 +4,7 @@
   <body>
     <header>
       <section>
-        <div class="header__column">
-          <p class="header-column__label">Updated</p>
-          <p>Placeholder</p>
-        </div>
+        <div class="header__column"></div>
         <div class="header__column">
           <img src="./assets/img/exclamation-mark.svg">
         </div>
@@ -21,16 +18,22 @@
     </header>
     <section class="main">
       <div class="main__headlines">
-        <h1 class="main-headlines__big">Placeholder</h1>
-        <h4 class="main-headlines__small">Placeholder</h4>
+        <h1 class="main-headlines__big"> {{ home_title }} </h1>
+        <h4 class="main-headlines__small"> {{ home_sub_title }} </h4>
       </div>
       <div class="main__text">
         <p class="main-text__line">
-          Placeholder
+          {{ custom_string_one }}
         </p>
         <div class="main-text__line">
-          Placeholder
+          {{ custom_string_two }}
         </div>
+      </div>
+      <div class="main__posts">
+        <h4>Posts</h4>
+        {% for post in blog_posts %}
+          <a href="posts/{{ post.url }}">{{ post.title }}</a>
+        {% endfor %}
       </div>
     </section>
   </body>

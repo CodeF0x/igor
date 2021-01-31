@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include "blog_head.html" %}
+{% include "partials/blog_head.html" %}
   <body>
     <section class="main">
-      <h1 class="main__headline"><%= blog_post_meta_data.title %></h1>
+      <h1 class="main__headline">{{ title }}</h1>
       <h4 class="main__author">
-      <!-- if date is present, show date and author, otherwise just author -->>
+        {% if date != "" %}
+        by <a href="{{ author_link }}">{{ author }}</a> | {{ date }}
+        {% else %}
+          by <a href="{{ author_link }}">{{ author }}</a>
+        {% endif %}
       </h4>
-      <p class="main__flowtext">
-        HTML Placeholder
-      </p>
+      <section class="main__flowtext">
+        {{ html | safe }}
+      </section>
     </section>
   </body>
 </html>
