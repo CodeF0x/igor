@@ -83,7 +83,35 @@ header > section {
   margin: 35px;
 }
 
-.main__posts h4 {
+.main__posts h3 {
   text-align: center;
   color: var(--color-contrast);
+}
+
+.no-color {
+  color: var(--color);
+}
+
+@media (max-width: 800px) and (max-height: 1280px) {
+  .main__text {
+    width: 80%;
+    text-align: justify;
+  }
+  
+  .main-text__line {
+    white-space: normal;
+  }
+
+  .main-text__line::after,
+  .main-text__line::before {
+    content: ''
+  }
+}
+
+@media (max-width: 812px) and (max-height: 375px) {
+  
+}
+
+@media (max-width: 414px) {
+  
 }

@@ -6,7 +6,7 @@
       <h1 class="main__headline">{{ title }}</h1>
       <h4 class="main__author">
         {% if date != "" %}
-        by <a href="{{ author_link }}">{{ author }}</a> | {{ date }}
+        by <a href="{{ author_link }}">{{ author }}</a> | {{ human_friendly_date }}
         {% else %}
           by <a href="{{ author_link }}">{{ author }}</a>
         {% endif %}

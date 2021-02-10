@@ -30,10 +30,14 @@
         </div>
       </div>
       <div class="main__posts">
-        <h4>Posts</h4>
-        {% for post in blog_posts %}
-          <a href="posts/{{ post.url }}">{{ post.title }}</a>
-        {% endfor %}
+        {% if blog_posts | first == "" %}
+          <h3 class="no-color">No posts yet...</h3>
+        {% else %}
+          <h3>Posts</h3>
+          {% for post in blog_posts %}
+            <a href="posts/{{ post.url }}">{{ post.title }}</a>
+          {% endfor %}
+        {% endif %}
       </div>
     </section>
   </body>
