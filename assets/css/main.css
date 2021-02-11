@@ -107,11 +107,3 @@ header > section {
     content: ''
   }
 }
-
-@media (max-width: 812px) and (max-height: 375px) {
-  
-}
-
-@media (max-width: 414px) {
-  
-}

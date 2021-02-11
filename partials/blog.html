@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-{% include "partials/blog_head.html" %}
+  {% include "partials/blog_head.html" %}
   <body>
+    <div class="top-right-menu">
+      <a href="../">home</a>
+      <span>|</span>
+      <a href="" id="back-to-top">back to top</a>
+    </div>
     <section class="main">
       <h1 class="main__headline">{{ title }}</h1>
       <h4 class="main__author">
-        {% if date != "" %}
-        by <a href="{{ author_link }}">{{ author }}</a> | {{ human_friendly_date }}
-        {% else %}
-          by <a href="{{ author_link }}">{{ author }}</a>
-        {% endif %}
+        by <a href="{{ author_link }}">{{ author }}</a> | {{ human_friendly_date
+        }}
       </h4>
-      <section class="main__flowtext">
-        {{ html | safe }}
-      </section>
+      <section class="main__flowtext">{{ html | safe }}</section>
     </section>
+    <script>
+      document.getElementById("back-to-top").addEventListener("click", (e) => {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
   </body>
 </html>

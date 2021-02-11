@@ -8,6 +8,7 @@
 }
 
 body {
+    font-family: "Roboto", sans-serif;
     background: var(--background);
 }
 
@@ -15,14 +16,15 @@ a {
     color: var(--color);
 }
 
+.top-right-menu {
+    position: fixed;
+    top: 20px;
+    right: 10px;
+}
+
 .main {
     margin: 150px auto;
     width: 50%;
-}
-
-.main__headline,
-.main__author {
-    font-family: "Roboto", sans-serif;
 }
 
 .main__headline {
@@ -38,4 +40,10 @@ a {
     font-family: "JetBrains Mono", monospace;
     text-align: justify;
     color: var(--color);
+}
+
+@media (max-width: 414px) {
+    .main {
+        width: 90%;
+    }
 }
