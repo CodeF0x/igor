@@ -7,6 +7,11 @@
   --color-contrast: yellow;
 }
 
+::selection {
+  background: var(--color-contrast);
+  color: black;
+}
+
 body {
   color: var(--color);
   background: var(--background);
